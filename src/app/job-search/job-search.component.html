@@ -1,0 +1,67 @@
+<br>
+
+<section class="search-sec">
+    <div class="container">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select (click)="CompanyEvent($event)" class="form-control search-slt"
+                                id="exampleFormControlSelect1">
+                                <option disabled>Select Company</option>
+                                <option *ngFor="let company of jobTitles">{{company.company}}</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select (click)="TypeEvent($event)" class="form-control search-slt"
+                                id="exampleFormControlSelect1">
+                                <option disabled>Select Job Type</option>
+                                <option *ngFor="let types of jobTitles">{{types.type}}</option>
+
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select (click)="LocationEvent($event)" class="form-control search-slt"
+                                id="exampleFormControlSelect1">
+                                <option disabled>Select Location</option>
+                                <option *ngFor="let place of jobTitles">{{place.location}}</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <button type="button" class="btn btn-warning wrn-btn">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<div *ngFor="let jobs of jobTitles">
+
+    <div class='my-css-class'>
+        <div class="card">
+            <img class="card-img-top" src="{{jobs.company_logo}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{jobs.title}}</h5>
+                <p class="card-text">{{jobs.description.slice(0,100)}}</p>
+            </div>
+            <div class="card-footer">
+                <button (click)="showId(jobs.id)">Show id</button>
+                <small class="text-muted">{{jobs.company}}</small>
+            </div>
+        </div>
+        <!-- <div class="card">
+        <h5 class="card-header"></h5>
+        <div class="card-body">
+            <h5 class="card-title">{{jobs.company}}</h5>
+            <p class="card-text">{{jobs.description}}</p>
+            <a href="{{jobs.url}}" class="btn btn-primary">Apply</a>
+        </div> -->
+
+
+
+    </div>
+
+
+</div>

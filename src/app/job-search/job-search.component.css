@@ -1,0 +1,43 @@
+#table-container .container{
+    background-color: white;
+    padding: 0;
+    border-radius: 16px;
+}
+
+.search-sec{
+    background: #0a243a;padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+     height: calc(3rem + 2px) !important;
+     border-radius:0;
+}
+
+.my-css-class {
+    width: 30%;
+    float: left;
+    margin: 1em;
+}
+
+/* p {
+    color: #fff;
+}
+
+h5 {
+    color: #fff;
+} */
